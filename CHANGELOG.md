@@ -16,3 +16,7 @@
 ## 1.1.2 (2021-04-30)
 
 - Implemnt local installation with --install=local
+
+## 1.2.0 (2024-12-16)
+
+- Implement reverse ordering

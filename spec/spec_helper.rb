@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "git-merge-structure-sql"
+require "git-driver-merge-structure-sql"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

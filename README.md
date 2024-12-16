@@ -1,4 +1,7 @@
-# git-merge-structure-sql
+# git-driver-merge-structure-sql
+
+This is a fork from [the original unmaintained version](https://github.com/knu/git-merge-structure-sql)
+to support the newer reversed order version markers in structure.sql
 
 This is a merge driver for Git that resolves typical merge conflicts
 in a `db/structure.sql` file of Rails.
@@ -19,12 +22,12 @@ supported.
 
 Run this:
 
-    $ gem install git-merge-structure-sql
+    $ gem install git-driver-merge-structure-sql
 
 And enable it yourself in your Git configuration, or let it do that
 for you by this command:
 
-    $ git-merge-structure-sql --install
+    $ git-driver-merge-structure-sql --install
 
 This adds necessary settings to your `~/.gitconfig` or
 `$XDG_CONFIG_HOME/git/config` and the default gitattributes(5) file to
@@ -33,7 +36,7 @@ enable the merge driver for structure.sql files.
 If you want to enable this driver only in the current git directory,
 run this:
 
-    $ git-merge-structure-sql --install=local
+    $ git-driver-merge-structure-sql --install=local
 
 ## Usage
 

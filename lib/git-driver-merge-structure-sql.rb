@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 #
-# git-merge-structure-sql - git merge driver for db/structure.sql in a Rails project
+# git-driver-merge-structure-sql - git merge driver for db/structure.sql in a Rails project
 #
 # How to use:
-#     $ git-merge-structure-sql --install
+#     $ git-driver-merge-structure-sql --install
 #
 # Copyright (c) 2018-2021 Akinori MUSHA
 #
@@ -33,7 +33,7 @@
 #
 
 class StructureSqlMergeDriver
-  VERSION = '1.1.2'
+  VERSION = '1.2.0'
   VARIANTS = []
 
   module Default # This covers PostgreSQL, SQLite and newer MySQL formats.
@@ -55,7 +55,7 @@ class StructureSqlMergeDriver
         replacement = format_versions(
           contents.inject([]) { |versions, content|
             versions | content[RE_VERSIONS].scan(RE_VERSION).flatten
-          }.sort
+          }.sort.reverse
         )
 
         contents.each { |content|
@@ -112,7 +112,7 @@ class StructureSqlMergeDriver
         replacement = format_versions(
           contents.inject([]) { |versions, content|
             versions | content.scan(RE_VERSION).flatten
-          }.sort
+          }.sort.reverse
         )
 
         contents.each { |content|

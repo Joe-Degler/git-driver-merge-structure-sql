@@ -1,22 +1,22 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "git-merge-structure-sql"
+require "git-driver-merge-structure-sql"
 
 Gem::Specification.new do |spec|
-  spec.name          = "git-merge-structure-sql"
+  spec.name          = "git-driver-merge-structure-sql"
   spec.version       = StructureSqlMergeDriver::VERSION
-  spec.authors       = ["Akinori MUSHA"]
-  spec.email         = ["knu@idaemons.org"]
+  spec.authors       = ["Akinori MUSHA", "Joe Degler"]
+  spec.email         = ["knu@idaemons.org", "joe@degler.dev"]
   spec.license       = "BSD-2-Clause"
 
-  spec.summary       = %q{git merge driver for db/structure.sql in a Rails project}
-  spec.homepage      = "https://github.com/knu/git-merge-structure-sql"
+  spec.summary       = %q{git merge driver for db/structure.sql in a Rails project. Originally forked from git-merge-structure-sql}
+  spec.homepage      = "https://github.com/Joe-Degler/git-driver-merge-structure-sql"
 
   if spec.respond_to?(:metadata)
     spec.metadata["homepage_uri"] = spec.homepage
     spec.metadata["source_code_uri"] = spec.homepage
-    spec.metadata["changelog_uri"] = "https://github.com/knu/git-merge-structure-sql/blob/master/CHANGELOG.md"
+    spec.metadata["changelog_uri"] = "https://github.com/Joe-Degler/git-driver-merge-structure-sql/blob/master/CHANGELOG.md"
   end
 
   # Specify which files should be added to the gem when it is released.
